@@ -1,4 +1,116 @@
 .progress {
-  padding: 20px;
-  border: 1px solid #ddd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 120px 8%;
+  gap: 80px;
+  background: #f5f5f5;
+  position: relative;
+}
+
+/* reverse layout support */
+.progress.reverse {
+  flex-direction: row-reverse;
+}
+
+/* CONTENT SIDE */
+.progress-content {
+  flex: 1;
+  max-width: 520px;
+}
+
+.progress-content h2 {
+  font-size: 4rem;
+  line-height: 1;
+  font-weight: 500;
+  color: #111;
+}
+
+.progress-content h2 span {
+  background: #dcebd9;
+  padding: 0 10px;
+  border-radius: 20px;
+}
+
+.progress-content p {
+  margin: 25px 0;
+  line-height: 1.8;
+  color: #444;
+}
+
+.progress-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #111;
+}
+
+.progress-link .line {
+  width: 80px;
+  height: 1px;
+  background: #111;
+}
+
+/* IMAGE SIDE (PURE DECORATIVE AREA) */
+.progress-image {
+  flex: 1;
+  height: 450px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* big soft green glow */
+.green-blur {
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  background: rgba(160, 220, 170, 0.35);
+  filter: blur(90px);
+  border-radius: 50%;
+  top: 20px;
+  left: 60px;
+}
+
+/* yellow tilted square */
+.yellow-shape {
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background: #ffd95e;
+  transform: rotate(18deg);
+  border-radius: 18px;
+  right: 80px;
+  top: 80px;
+}
+
+/* purple ring (Figma vibe decoration) */
+.circle-ring {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 2px solid #8748ff;
+  border-radius: 50%;
+  bottom: 40px;
+  left: 40px;
+  opacity: 0.4;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .progress {
+    flex-direction: column;
+    text-align: center;
+    gap: 50px;
+  }
+
+  .progress-content h2 {
+    font-size: 2.5rem;
+  }
+
+  .progress-image {
+    height: 300px;
+  }
 }
