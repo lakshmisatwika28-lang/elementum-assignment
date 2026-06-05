@@ -1,48 +1,41 @@
 import "./Offer.css";
 
-const services = [
+const offers = [
   {
-    id: "01",
-    subtitle: "Office of multiple interest content",
+    small: "Office of multiple\ninterest content",
     title: "Collaborative & partnership",
   },
   {
-    id: "02",
-    subtitle: "The hanger US Air force digital experimental",
+    small: "The hanger US Air force\ndigital experimental",
     title: "We talk about our weight",
   },
   {
-    id: "03",
-    subtitle: "Delta faucet content, social, digital",
+    small: "Delta faucet content,\nsocial, digital",
     title: "Piloting digital confidence",
   },
 ];
 
 const Offer = () => {
   return (
-    <section className="offer">
+    <section className="offer-section">
+      <div className="offer-curve"></div>
+
       <div className="offer-heading">
         <h2>
-          What we can
+          What we <span>can</span>
           <br />
-          offer you!
+          <em>offer</em> you!
         </h2>
       </div>
 
       <div className="offer-list">
-        {services.map((item) => (
-          <div className="offer-card" key={item.id}>
-            <div className="offer-left">
-              <span>{item.subtitle}</span>
-            </div>
+        {offers.map((item, index) => (
+          <div className="offer-row" key={index}>
+            <p className="offer-small">{item.small}</p>
 
-            <div className="offer-center">
-              <h3>{item.title}</h3>
-            </div>
+            <h3>{item.title}</h3>
 
-            <div className="offer-right">
-              <span className="arrow">↗</span>
-            </div>
+            <div className="offer-arrow">→</div>
           </div>
         ))}
       </div>

@@ -2,9 +2,9 @@ import "./Newsletter.css";
 
 const Newsletter = () => {
   return (
-    <section className="newsletter">
-
-      <div className="newsletter-purple"></div>
+    <section className="newsletter-section">
+      <div className="newsletter-lines"></div>
+      <div className="newsletter-shape"></div>
 
       <h2>
         Subscribe to
@@ -12,21 +12,9 @@ const Newsletter = () => {
         our newsletter
       </h2>
 
-      <p>
-        To make your stay special and even more memorable
-      </p>
+      <p>To make your stay special and even more memorable</p>
 
-      <form className="newsletter-form">
-        <input
-          type="email"
-          placeholder="Enter your email"
-        />
-
-        <button type="submit">
-          Subscribe Now
-        </button>
-      </form>
-
+      <button>Subscribe Now</button>
     </section>
   );
 };
